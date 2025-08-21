@@ -1,0 +1,7 @@
+# Comparision between Astar and Bestfirstsearch
+
+The main difference between A* search and Best First Search (Greedy) lies in how they evaluate which node to expand. A* uses the function f(n) = g(n) + h(n), where g(n) is the actual cost from the start node to the current node and h(n) is the heuristic estimate of the cost to reach the goal. This balance between the known cost and the heuristic ensures that A* always finds the shortest path if the heuristic is admissible (never overestimates) and consistent. In contrast, Best First Search only uses the heuristic value h(n) and ignores the cost already traveled, making it a purely greedy approach.
+
+Because of this difference, A* is complete and optimal: it will always find a path if one exists, and that path will be the shortest. Best First Search, however, is not guaranteed to be optimal or even complete; if the heuristic misleads the search, it may return a longer path or fail to find one at all. In terms of complexity, both algorithms have the same worst-case asymptotic bounds: O(n² log n) time and O(n²) space for an n × n grid. However, in practice, Best First Search often expands fewer nodes and runs faster, since it only follows the heuristic. The tradeoff is that it sacrifices optimality.
+
+In summary, A* is the best choice when the shortest path is required (for example, in navigation systems or robotics), while Best First Search is more suitable when speed is more important than optimality, such as in games or when an approximate path is acceptable.
