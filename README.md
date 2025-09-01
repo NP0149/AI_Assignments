@@ -1,7 +1,7 @@
-## Name:Pasunuri Navya
+## Name : Pasunuri Navya
 
-## ID:B210149
+## ID : B210149
 
-## Class:E3-CSE-C4
+## Class : E3-CSE-C4
 
-## Roll No.:06
+## Roll No. : 06
